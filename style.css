@@ -1,0 +1,328 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #1b8848d7;
+    color: #02100e98;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: #010507;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #e7e254;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #010507;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1b8848d7;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e7e254;
+    color: #02100e98;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('image-1.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0a1364;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #158f4e;
+    color: #f6f6f5;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a8b70;
+}
+
+/* Workouts Section */
+#workouts {
+    padding: 50px 20px;
+    background-color: #090d6f;
+}
+
+#workouts h2 {
+    text-align: center;
+    color: #61d44f;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.workout-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.workout-cards .card {
+    background-color: #f0d747;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.workout-cards .card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.workout-cards .card h3 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Nutrition Section */
+#nutrition {
+    padding: 50px 20px;
+    background-color: #468cce;
+}
+
+#nutrition h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.nutrition-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.nutrition-content img {
+    width: 20%;
+    min-width: 230px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.nutrition-content div {
+    max-width: 500px;
+    text-align: center;
+}
+
+.nutrition-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Blog Section */
+#blog {
+    padding: 50px 20px;
+    background-color: #44bcd4;
+}
+
+#blog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.blog-posts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog-posts .post {
+    background-color: #dbe436;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-posts .post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.blog-posts .post h3 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #c3844a;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #db8c16;
+    font-size: 16px;
+}
+
+#contact button {
+    background-color: #361f09;
+    color: #dfd883;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #d27d41;
+}
+
+/* Footer */
+.footer {
+    background-color: #11206f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* scaling class */
+.scale {
+    transition: transform 0.5s ease;
+}
+.scale:hover{
+    transform: scale(1.05);  
+}
